@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Grouping_maps"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             x:Class="Grouping_maps.MainPage">
+   
+        <maps:SfMaps >
+            <maps:SfMaps.Layers>
+                <maps:ImageryLayer x:Name="imageryLayer" ZoomLevelChanging="ImageryLayer_ZoomLevelChanging">
+                    <maps:ImageryLayer.MarkerTemplate>
+                        <OnPlatform x:TypeArguments="DataTemplate">
+                            <On Platform="Android, iOS">
+                            <DataTemplate>
+                                <Grid>
+                                    <Image Source="{Binding ImageName}" HorizontalOptions="Start" VerticalOptions="Center"
+                                       HeightRequest="30" WidthRequest="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </On>
+                        <On Platform="UWP">
+                            <DataTemplate>
+                                <Grid Padding="-14,-14, 0, 0">
+                                    <Image Source="{Binding ImageName}" HorizontalOptions="Start" VerticalOptions="Center"
+                                       HeightRequest="30" WidthRequest="30"/>
+                                </Grid>
+                            </DataTemplate>
+                        </On>
+                        </OnPlatform>
+                    </maps:ImageryLayer.MarkerTemplate>
+                </maps:ImageryLayer>
+            </maps:SfMaps.Layers>
+        </maps:SfMaps>
+   
+</ContentPage>
