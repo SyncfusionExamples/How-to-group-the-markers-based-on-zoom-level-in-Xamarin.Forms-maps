@@ -1,6 +1,6 @@
 # How to group the markers based on zoom level in Xamarin.Forms Maps
 
-This repository contains sample for how to group the markers based on zoom level in the [Syncfusion Xamarin.Forms Maps](https://help.syncfusion.com/xamarin/maps/getting-started) control.
+This repository contains sample to group the markers based on zoom level in the [Syncfusion Xamarin.Forms Maps](https://help.syncfusion.com/xamarin/maps/getting-started) control.
 
 Please refer the KB through this [link](https://www.syncfusion.com/kb/10200/how-to-group-the-markers-based-on-zoom-level-in-the-imagery-layer-of-the-sfmaps-control).
 
